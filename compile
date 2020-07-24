@@ -7,5 +7,5 @@ export LOGGER=""
 printf "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 
 printf "\nCompile common...-----------------------------------------------------------------------\n"
-cd $COMMON_DEV_PATH/
+#cd $COMMON_DEV_PATH/
 gradle $NET_STATUS $LOGGER build $*

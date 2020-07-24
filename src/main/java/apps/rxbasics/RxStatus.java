@@ -47,6 +47,23 @@ public class RxStatus extends RxBase {
     }
 
 //-------------------------------------------------------------------------------------
+    public synchronized String getStatusAsString(){
+    	return getStatusAsString(status);
+    }
+
+//-------------------------------------------------------------------------------------
+    public synchronized String getStatusAsString(int _status){
+        String _string = "";//super.toString() + " : ";
+        switch(_status){
+            case STATUS_INIT 		: return _string + "INIT";
+            case STATUS_RUNNING 	: return _string + "RUNNING";
+            case STATUS_PAUSED 		: return _string + "PAUSED";
+            case STATUS_STOPPED 	: return _string + "STOPPED";
+            default 				: return _string + "ERROR";
+        }
+    }
+
+//-------------------------------------------------------------------------------------
     public synchronized void setStatus(int _status){
     	status = _status;
     }
@@ -123,14 +140,7 @@ public class RxStatus extends RxBase {
 
 //-------------------------------------------------------------------------------------
     public String toString(){
-        String _string = "";//super.toString() + " : ";
-        switch(status){
-            case STATUS_INIT 		: return _string + "INIT";
-            case STATUS_RUNNING 	: return _string + "RUNNING";
-            case STATUS_PAUSED 		: return _string + "PAUSED";
-            case STATUS_STOPPED 	: return _string + "STOPPED";
-            default 				: return _string + "ERROR";
-        }
+    	return getStatusAsString();
     }
 //-------------------------------------------------------------------------------------
 }
