@@ -123,7 +123,7 @@ public class L8_RxFlux_Flux extends RxStatus implements RxFlux {
 
 //-------------------------------------------------------------------------------------
     public void connect(L4_RxFlux_Channel _rxFluxChannel){
-        debug.outln("Connecting ["+this+"] to [" + _rxFluxChannel+ "]...");
+//        debug.outln("Connecting ["+this+"] to [" + _rxFluxChannel+ "]...");
         if(!_rxFluxChannel.getChannelDescriptor().getFluxName().equals(getName())){
         	debug.outln(Debug.ERROR, "Cannot connect channel [" + _rxFluxChannel + "] with flux [" + this + "]...");
         	return;

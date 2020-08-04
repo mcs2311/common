@@ -115,7 +115,7 @@ public class L7_RxFlux_ChannelMap extends RxStatus implements FlowableOnSubscrib
 
 //-------------------------------------------------------------------------------------
     public void announceSyncChannels(String _fluxName){
-        debug.outln(Debug.ERROR, "L7_RxFlux_ChannelMap.announceSyncChannels.... for _fluxName = " + _fluxName);
+//        debug.outln(Debug.ERROR, "L7_RxFlux_ChannelMap.announceSyncChannels.... for _fluxName = " + _fluxName);
     	channelMap.forEach((_k, _v) -> {
 			L4_RxFlux_Channel _rxFluxChannel0 = (L4_RxFlux_Channel)_v;
 			if(_rxFluxChannel0.getChannelDescriptor().isSyncType()){

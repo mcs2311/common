@@ -53,7 +53,7 @@ public class L8_RxFlux_FluxMapManager extends RxBase {
     public RxFlux connect(L4_RxFlux_Channel _rxFluxChannel){
 //    	L4_RxFlux_Channel _channel = (L4_RxFlux_Channel)_rxFlux;
     	String _fluxName = _rxFluxChannel.getChannelDescriptor().getFluxName();
-        debug.outln("Connect ["+_rxFluxChannel+"] to map ...");
+//        debug.outln("Connect ["+_rxFluxChannel+"] to map ...");
 //    	map.put(_uid, _flux);
 
 //    	L8_RxFlux_Flux _rxFlux = getFlux(_uid);
@@ -71,7 +71,7 @@ public class L8_RxFlux_FluxMapManager extends RxBase {
 
 //-------------------------------------------------------------------------------------
     public void feed(L4_RxFlux_Channel _rxFluxChannel){
-        debug.outln(Debug.IMPORTANT3, "Feeding ["+_rxFluxChannel+"]  ...");
+//        debug.outln(Debug.IMPORTANT3, "Feeding ["+_rxFluxChannel+"]  ...");
         List<String> _uidList = new ArrayList<String>(fluxMapCache.keySet());
     	_rxFluxChannel.announce(_uidList); 
     }

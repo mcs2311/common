@@ -49,7 +49,7 @@ public class L6_RxFlux_ServerFactory extends RxStatus implements FlowableOnSubsc
 //            debug.outln("listen...0");
             while(getStatus() != STATUS_STOPPED) {
                 Socket _socket = _listener.accept();
-        		debug.outln(Debug.IMPORTANT3, "L6_RxFlux_ServerFactory _socket = ["+_socket+"] ...");
+//        		debug.outln(Debug.IMPORTANT3, "L6_RxFlux_ServerFactory _socket = ["+_socket+"] ...");
 	    		L5_RxFlux_ServerChannelFactory _serverChannelFactory = new L5_RxFlux_ServerChannelFactory(debug, _socket);
 	    		add(_serverChannelFactory);
 	    		_serverChannelFactory.start();

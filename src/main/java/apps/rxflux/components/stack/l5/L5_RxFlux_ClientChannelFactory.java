@@ -81,7 +81,7 @@ public class L5_RxFlux_ClientChannelFactory extends L5_RxFlux_ChannelFactory {
 			RxMessage _rxMessage = _dataChannel.readMessage();
 //			debug.outln("L5_RxFlux_ClientChannelFactory.openDataChannel...2... " + _rxMessage);
 			if(_rxMessage.getCode() == RxMessage.CODE_OK){
-				debug.outln("Data channel["+_fluxName+"] confirmed!!!");
+//				debug.outln("Data channel["+_fluxName+"] confirmed!!!");
 				dataChannels.add(_dataChannel);
 				onNext(_dataChannel);
 			}
